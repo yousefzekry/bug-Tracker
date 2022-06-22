@@ -18,12 +18,12 @@ app.use('/api/v1/tasks', tasks)
 app.use(notFound)
 app.use(errorHandlerMiddleWare)
 const port = process.env.PORT || 3000;
-// app.get('/api/v1/tasks') hena bngeeb el tasks kolaha in home page
-// app.post('/api/v1/tasks') hena benzawed 3la total el tasks
-// app.get('/api/v1/tasks/:id') hena bengeeb el task bel id lama bendoos 3leeh
-// app.patch('/api/v1/tasks/:id') hena ben update el specific task
-// app.delete('/api/v1/tasks/:id') hena ben delete el specific task
-// we used v1 in routes just in case we wantewd to update the app later we can mark all the V1 at once and redirect everyone to the new V
+// app.get('/api/v1/tasks') here we are getting all tasks in our home page
+// app.post('/api/v1/tasks') here we are adding on our total tasks
+// app.get('/api/v1/tasks/:id') hena we are getting task by id ON CLICK
+// app.patch('/api/v1/tasks/:id') here we are updating specific task
+// app.delete('/api/v1/tasks/:id') here we are deleting a specific task
+// we used v1 in routes just in case we wanted to update the app later we can mark all the V1 at once and redirect everyone to the new V
 
 //the code below is for deployment environment
 
