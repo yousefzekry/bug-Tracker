@@ -1,5 +1,5 @@
 const express = require('express')
-//3mlna el router 3shan ne3rf ne3ml chain lel requests
+//we created router instance from express Router so we can use it and chain all the http requests
 const router = express.Router();
 
 const { getAllTasks,createTask,getTask,updateTask,deleteTask} = require('../controllers/tasks')
@@ -19,5 +19,5 @@ router.route('/:id')
 .get(getTask)
 .patch(updateTask)
 .delete(deleteTask)
-//3mlna export 3lashan ne3rf ne3mlo import fel app.js file
+//exported so we can import it and use it in the app.js file
 module.exports = router
