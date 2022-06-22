@@ -1,5 +1,5 @@
 //using the schema we created in the model folder
-//el task el fel controller beyklm el task el f folder el model 
+//the task file in controller is communicating with task in the model folder 
 const asyncWrapper = require('../middleware/async')
 const Task = require('../models/Task')
 
@@ -25,12 +25,12 @@ const createTask = asyncWrapper(async (req, res) => {
 // }
 const getTask = asyncWrapper(async(req,res) =>{
         const {id:taskID} = req.params 
-        //3arafna mayeteen el task en e7na mestanyeen mayeteeno yerod 3leena bel findOne
+        //declared the task that we are waiting for it to respond with findOne
         const task = await Task.findOne({_id:taskID});
         if(!task){
             return res.status(404).json({msg:`No Task found with ID : ${taskID}`})
         } 
-        //hena raga3lena el status b OK lw gt we el task f Json 
+        //here it responded back with status OK in Json 
         res.status(200).json({task})
         
     }
@@ -64,7 +64,7 @@ const updateTask = asyncWrapper(async (req,res) =>{
    
 }
 )
-
+//here we exported all HTTP requests to use them in the tasks file inside model 
 module.exports = {
     getAllTasks,
     createTask,
